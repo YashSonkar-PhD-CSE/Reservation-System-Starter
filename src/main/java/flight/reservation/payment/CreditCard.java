@@ -1,6 +1,7 @@
 package flight.reservation.payment;
 
 import java.util.Date;
+import flight.reservation.payment.PaymentStrategy;
 
 /**
  * Dummy credit card class.
