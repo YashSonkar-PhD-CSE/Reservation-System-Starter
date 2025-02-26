@@ -90,6 +90,12 @@ public class PassengerPlaneAdapter implements Plane {
     }
     
 }
+
+// Using the adapter class (sample from RUnner.java)
+static List<Plane> aircrafts = Arrays.asList(
+            new PassengerPlaneAdapter(new PassengerPlane("A380")),
+            new PassengerPlaneAdapter(new PassengerPlane("A350")),
+    );
 ```
 **Note**: Some planes didn't contain fields for passenger and crew capacity. For them reasonable assumptions were taken.
 
