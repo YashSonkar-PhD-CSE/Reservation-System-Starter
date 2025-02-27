@@ -18,7 +18,7 @@ public class HelicopterAdapter implements Plane {
 
     @Override
     public int getCrewCapacity() {
-        return this.helicopter.getCrewCapacity();
+        return 2;
     }
 
     @Override

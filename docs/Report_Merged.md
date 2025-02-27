@@ -13,7 +13,9 @@
 * Strategy Pattern
 
 ## Adapter Pattern:
-**Introduction**: // Explain adapter pattern
+**Introduction**: The Adapter Pattern is a structural design pattern that acts as a bridge between two incompatible interfaces. 
+It allows previously incompatible classes to work together by converting the interface 
+of one class into an interface expected by the clients.
 
 **Requirement**: The code contains multiple types of flights namely:
 * PassengerPlane
@@ -109,7 +111,7 @@ static List<Plane> aircrafts = Arrays.asList(
 **Note**: Some planes didn't contain fields for passenger and crew capacity. For them reasonable assumptions were taken.
 
 ## Singleton Pattern
-**Introduction**: // Explain Singleton Pattern
+**Introduction**: The Singleton Pattern ensures that a class has only one instance and provides a global point of access to it. 
 
 **Requirement**: In the original implementation, it was possible for multiple instances of schedule to exist during the application lifecycle. This can cause issues since both schedules would then have different data which we don't want. 
 
@@ -129,9 +131,10 @@ public class Schedule {
     }
     
     // Other methods
+}
 ```
 
-Modified class (using SIngleton pattern)
+Modified class (using Singleton pattern)
 ```java
 package flight.reservation.flight;
 
@@ -147,20 +150,21 @@ public class Schedule {
     public static Schedule getInstance() {
         // This ensures that only one instance of the class
         if (instance == null) {
-            instance = new Schedule;
+            instance = new Schedule();
         }
         return instance;
     }
 
     // Other methods
+}
 ```
 
 ## Strategy Pattern
-**Introduction**: // Explain Strategy Pattern
+**Introduction**: The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. 
 
 **Requirement**: 
 
-**Benefits of using Strategy pattern**: 
+**Benefits of using Strategy pattern**: The Strategy pattern is employed to provide a flexible and extensible way to manage different payment methods. It allows the system to support new payment methods without modifying the core payment processing logic. Each payment method is encapsulated in a separate strategy class, implementing a common interface. This promotes loose coupling and adheres to the Open/Closed Principle, making the system more maintainable and adaptable to future payment options.
 
 Snippet from implementation
 PaymentStrategy Interface:

@@ -1,5 +1,5 @@
 package flight.reservation.payment;
 
-public interace PaymentStrategy {
+public interface PaymentStrategy {
     boolean pay(double amount);
 }

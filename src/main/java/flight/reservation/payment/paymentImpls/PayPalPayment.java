@@ -18,6 +18,6 @@ public class PaypalPayment implements PaymentStrategy {
             System.out.println("Paying " + amount + " using PayPal.");
             return true;
         }
-        return false
+        return false;
     }
 }

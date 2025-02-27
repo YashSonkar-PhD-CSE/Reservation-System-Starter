@@ -12,7 +12,7 @@ public class CreditCardPayment implements PaymentStrategy {
 
     @Override
     public boolean pay(double amount) {
-        iif (card.isValid() && card.getAmount() >= amount) {
+        if (card.isValid() && card.getAmount() >= amount) {
             System.out.println("Paying " + amount + " using Credit Card.");
             card.setAmount(card.getAmount() - amount);
             return true;

@@ -4,8 +4,9 @@ import flight.reservation.Customer;
 import flight.reservation.flight.ScheduledFlight;
 import flight.reservation.payment.CreditCard;
 import flight.reservation.payment.Paypal;
-import flight.reservation.payment.PaymentImpls.PaypalPayment;
-import flight.reservation.payment.PaymentImpls.CreditCardPayment;
+import flight.reservation.payment.PaymentStrategy;
+import flight.reservation.payment.paymentImpls.PaypalPayment;
+import flight.reservation.payment.paymentImpls.CreditCardPayment;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -48,7 +49,7 @@ public class FlightOrder extends Order {
     }
 
     public boolean processOrderWithCreditCardDetail(String number, Date expirationDate, String cvv) throws IllegalStateException {
-        CreditCardPayment creditCardPayment = new CreditCardPayment(number, expirationDate, cvv);
+        CreditCardPayment creditCardPayment = new CreditCardPayment(new CreditCard(number, expirationDate, cvv));
         return processOrder(creditCardPayment);
     }
 

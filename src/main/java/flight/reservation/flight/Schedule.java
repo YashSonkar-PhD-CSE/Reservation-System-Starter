@@ -16,7 +16,7 @@ public class Schedule {
 
     public static Schedule getInstance() {
         if (instance == null) {
-            instance = new Schedule;
+            instance = new Schedule();
         }
         return instance;
     }
